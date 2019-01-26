@@ -11,16 +11,16 @@ import javax.persistence.Table;
 public class Supplier {
 	@Id
 	@GeneratedValue
-	int supplierID;
+	int supplierId;
 	
 	String supplierName;
 	String supplierDesc;
 	
-	public int getSupplierID() {
-		return supplierID;
+	public int getSupplierId() {
+		return supplierId;
 	}
-	public void setSupplierID(int supplierID) {
-		this.supplierID = supplierID;
+	public void setSupplierId(int supplierId) {
+		this.supplierId = supplierId;
 	}
 	public String getSupplierName() {
 		return supplierName;

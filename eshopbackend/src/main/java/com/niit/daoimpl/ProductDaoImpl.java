@@ -3,16 +3,17 @@ package com.niit.daoimpl;
 import java.util.List;
 
 
+
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
+import org.hibernate.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.dao.ProductDao;
 import com.niit.model.Product;
-import com.niit.model.Supplier;
 
 @Repository("productDao")
 @Transactional
@@ -59,7 +60,8 @@ public class ProductDaoImpl implements ProductDao
 	}	
 }
 
-	public List<Product> listProduct() {
+	public List<Product> listProducts() 
+	{
 		Session session=sessionFactory.openSession();
         Query query=session.createQuery("from Product");
         List<Product> listProducts=query.list();
@@ -68,9 +70,10 @@ public class ProductDaoImpl implements ProductDao
 	}
 
 
-	public Product getProduct(int proID) {
+	public Product getProduct(int proId) {
 		Session session=sessionFactory.openSession();
-        Product product=session.get(Product.class,proID);        
-		return product ;	}
+        Product product=session.get(Product.class,proId);        
+		return product ;	
+		}
 
 }

@@ -1,6 +1,7 @@
 package com.niit.model;
 
 import javax.persistence.Entity;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -11,12 +12,14 @@ public class Product
 {
    @Id
    @GeneratedValue
-   int proId;
    
+   int proId;   
    String proName;
    String proDesc;
    int proprice;
    int stock;
+   int categoryID;
+   int supplierId;
    
 public int getProId() {
 	return proId;
@@ -47,5 +50,17 @@ public int getStock() {
 }
 public void setStock(int stock) {
 	this.stock = stock;
+}
+public int getCategoryID() {
+	return categoryID;
+}
+public void setCategoryID(int categoryID) {
+	this.categoryID = categoryID;
+}
+public int getSupplierId() {
+	return supplierId;
+}
+public void setSupplierId(int supplierId) {
+	this.supplierId = supplierId;
 }
 }

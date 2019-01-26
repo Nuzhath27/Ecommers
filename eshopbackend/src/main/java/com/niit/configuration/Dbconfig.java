@@ -49,8 +49,8 @@ public class Dbconfig {
         
         factory.addAnnotatedClass(Category.class);
         factory.addAnnotatedClass(Supplier.class);
-        factory.addAnnotatedClass(Product.class);
         factory.addAnnotatedClass(UserInfo.class);
+        factory.addAnnotatedClass(Product.class);
 
 
         

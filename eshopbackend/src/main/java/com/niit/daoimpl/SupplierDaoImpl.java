@@ -66,10 +66,10 @@ public class SupplierDaoImpl implements SupplierDao
 		return listSuppliers;
 	}
 
-	public Supplier getSupplier(int supplierID) 
+	public Supplier getSupplier(int supplierId) 
 	{
 		    Session session=sessionFactory.openSession();
-	        Supplier supplier=session.get(Supplier.class,supplierID);        
+	        Supplier supplier=session.get(Supplier.class,supplierId);        
 			return supplier ;
 	}
 
