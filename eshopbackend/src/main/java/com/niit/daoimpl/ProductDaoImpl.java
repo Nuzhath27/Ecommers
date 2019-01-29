@@ -18,13 +18,13 @@ import com.niit.model.Product;
 @Repository("productDao")
 @Transactional
 public class ProductDaoImpl implements ProductDao
-
 {
 
 	@Autowired
     SessionFactory sessionFactory;
 	
-	public boolean addProduct(Product product) {
+	public boolean addProduct(Product product) 
+	{
 		try
         {
         sessionFactory.getCurrentSession().save(product);
@@ -46,7 +46,7 @@ public class ProductDaoImpl implements ProductDao
         {
         return false;
         }
-}
+	}
 
 	public boolean updateProduct(Product product) {
 		try
@@ -58,10 +58,8 @@ public class ProductDaoImpl implements ProductDao
         {
         return false;
 	}	
-}
-
-	public List<Product> listProducts() 
-	{
+	}
+	public List<Product> listProducts() {
 		Session session=sessionFactory.openSession();
         Query query=session.createQuery("from Product");
         List<Product> listProducts=query.list();
@@ -69,11 +67,9 @@ public class ProductDaoImpl implements ProductDao
 		return listProducts;
 	}
 
-
 	public Product getProduct(int proId) {
 		Session session=sessionFactory.openSession();
         Product product=session.get(Product.class,proId);        
-		return product ;	
-		}
-
+		return product ;
+	}
 }

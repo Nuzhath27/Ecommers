@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.niit.eshopbackend.CategoryUnitTest
+Test set: com.niit.eshopbackend.UserInfoTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 0.031 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="com.niit.eshopbackend.AppTest" time="0.016" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="com.niit.eshopbackend.SupplierTest" time="0" errors="0" skipped="3">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_191\jre\bin"/>
@@ -61,5 +61,13 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.niit.eshopbackend.AppTest" name="testApp" time="0.016"/>
+  <testcase classname="com.niit.eshopbackend.SupplierTest" name="Test" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.niit.eshopbackend.SupplierTest" name="deleteSupplierTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.niit.eshopbackend.SupplierTest" name="updateSupplierTest" time="0">
+    <skipped/>
+  </testcase>
 </testsuite>

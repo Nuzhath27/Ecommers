@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -27,7 +28,7 @@ public class SupplierTest {
 	    
 	    supplierDao=(SupplierDao) context.getBean("supplierDao");
 	}
-	
+	@Ignore
 	@Test
 	public void Test()
 	{
@@ -37,6 +38,7 @@ public class SupplierTest {
 		
 		assertTrue("Problem in adding the supplier",supplierDao.addSupplier(supplier));
 	}
+	@Ignore
 	@Test
 	public void deleteSupplierTest()
 	{
@@ -44,6 +46,7 @@ public class SupplierTest {
 		
 		assertTrue("Problem in deleting Supplier",supplierDao.deleteSupplier(supplier));
 	}
+	@Ignore
 	@Test
 	public void updateSupplierTest()
 	{

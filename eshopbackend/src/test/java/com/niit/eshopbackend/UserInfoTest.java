@@ -3,6 +3,7 @@ package com.niit.eshopbackend;
 import static org.junit.Assert.*;
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -24,6 +25,7 @@ public class UserInfoTest {
 	    
 	    userDao=(UserDao)context.getBean("userDao");
 	}
+	@Ignore
 	@Test
 	public void registerUserTest() 
 	{

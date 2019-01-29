@@ -3,6 +3,7 @@ package com.niit.eshopbackend;
 import static org.junit.Assert.*;
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -26,7 +27,7 @@ public class ProductTest {
 	    productDao=(ProductDao) context.getBean("productDao");
 	}
 	
-
+	@Ignore
 	@Test
 	public void test() {
 		Product product=new Product();
@@ -35,6 +36,7 @@ public class ProductTest {
 		
 		assertTrue("Problem in adding the product",productDao.addProduct(product));
 	}
+	@Ignore
 	@Test
 	public void deleteProductTest()
 	{
@@ -42,6 +44,7 @@ public class ProductTest {
 		
 		assertTrue("Problem in deleting product",productDao.deleteProduct(product));
 	}
+	@Ignore
 	@Test
 	public void updateProductTest()
 	{
