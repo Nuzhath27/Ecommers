@@ -4,7 +4,8 @@
 
 <br/><br/>
 
-<form:form action="UpdateProduct" modelAttribute="product" method="post">
+<c:url var="updateproduct" value="/UpdateProduct"/>
+<form:form action="${UpdateProduct}" modelAttribute="product" method="post">
 <table align="center" class="table-bordered"> 
     <tr>
        <td colspan="2"><center>Update Product</center></td>
@@ -13,7 +14,7 @@
        <td> Product ID </td>
        <td><form:input path="proId"/></td>
     </tr>
-    <tr>
+     <tr>
               <td>Product Desc</td>
               <td><form:input path="proDesc"/></td>
            </tr>
@@ -48,5 +49,5 @@
            </tr>
         </table>
         </form:form>
-        </body>
+          </body>
         </html>

@@ -4,11 +4,15 @@
 
 <br/><br/>
 
-<form:form action="InsertProduct" modelAttribute="product" method="post">
+<form:form action="InsertProduct" modelAttribute="product" method="post" enctype="multipart/form-data">
 <table align="center" class="table-bordered">
      <tr>
         <td colspan="2"><center>Product Information</center></td>
      </tr>
+     <tr>
+              <td>Product Desc</td>
+              <td><form:input path="proDesc"/></td>
+           </tr>
      <tr>
          <td>Product Name</td>
          <td><form:input path="proName"/></td>
@@ -35,10 +39,10 @@
              <td><form:input path="supplierId"/></td>
           </tr>
           <tr>
-              <td>Product Desc</td>
-              <td><form:input path="proDesc"/></td>
-           </tr>
-           <tr>
+             <td>Image</td>
+             <td><form:input type="file"  path="pimage"/></td>
+          </tr>
+         <tr>
               <td colspan="2"><center><input type="submit" value="InsertProduct"/></center></td>
            </tr>
         </table>
@@ -52,6 +56,7 @@
            <td>Price</td>
            <td>Stock</td>
            <td>Supplier</td>
+           <td>category</td>
            <td>Operations</td>
          </tr>
          <c:forEach items="${productList}" var="product">
@@ -61,6 +66,7 @@
             <td>${product.proprice}</td>
             <td>${product.stock}</td>
             <td>${product.supplierId}</td>
+            <td>${product.categoryID}</td>
             <td>
                   <a href="<c:url value="/editProduct/${product.proId}"/>"class="btn btn-success">Edit</a>/
                   <a href="<c:url value="/deleteProduct/${product.proId}"/>"class="btn btn-danger">Delete</a>

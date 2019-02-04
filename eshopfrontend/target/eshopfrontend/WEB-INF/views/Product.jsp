@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html"%>
+xza<%@ page language="java" contentType="text/html"%>
 <%@include file="Header.jsp"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
@@ -9,6 +9,10 @@
      <tr>
         <td colspan="2"><center>Product Information</center></td>
      </tr>
+     <tr>
+              <td>Product Desc</td>
+              <td><form:input path="proDesc"/></td>
+           </tr>
      <tr>
          <td>Product Name</td>
          <td><form:input path="proName"/></td>
@@ -34,11 +38,8 @@
              <td>Supplier</td>
              <td><form:input path="supplierId"/></td>
           </tr>
-          <tr>
-              <td>Product Desc</td>
-              <td><form:input path="proDesc"/></td>
-           </tr>
-           <tr>
+          
+         <tr>
               <td colspan="2"><center><input type="submit" value="InsertProduct"/></center></td>
            </tr>
         </table>
@@ -52,6 +53,7 @@
            <td>Price</td>
            <td>Stock</td>
            <td>Supplier</td>
+           <td>category</td>
            <td>Operations</td>
          </tr>
          <c:forEach items="${productList}" var="product">
@@ -61,6 +63,7 @@
             <td>${product.proprice}</td>
             <td>${product.stock}</td>
             <td>${product.supplierId}</td>
+            <td>${product.categoryID}</td>
             <td>
                   <a href="<c:url value="/editProduct/${product.proId}"/>"class="btn btn-success">Edit</a>/
                   <a href="<c:url value="/deleteProduct/${product.proId}"/>"class="btn btn-danger">Delete</a>

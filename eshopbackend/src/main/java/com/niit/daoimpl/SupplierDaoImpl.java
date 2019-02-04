@@ -57,7 +57,7 @@ public class SupplierDaoImpl implements SupplierDao
 	}
 }
 
-	public List<Supplier> listSupplier() 
+	public List<Supplier> listSuppliers() 
 	{
 		Session session=sessionFactory.openSession();
         Query query=session.createQuery("from Supplier");

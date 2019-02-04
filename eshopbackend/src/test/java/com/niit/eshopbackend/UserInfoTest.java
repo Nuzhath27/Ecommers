@@ -25,18 +25,19 @@ public class UserInfoTest {
 	    
 	    userDao=(UserDao)context.getBean("userDao");
 	}
+	
 	@Ignore
 	@Test
 	public void registerUserTest() 
 	{
 		UserInfo user=new UserInfo();
 		
-		user.setUsername("Lucky");
-		user.setPassword("P147");
-		user.setRole("ROLE_USER");
+		user.setUsername("Happy");
+		user.setPassword("P258");
+		user.setRole("ROLE_ADMIN");
 		user.setEnabled(true);
-		user.setCustomerName("Lucky Singh");
-		user.setCustomerAddr("Delhi");
+		user.setCustomerName("Sameer");
+		user.setCustomerAddr("Mumbai");
 		
 		assertTrue("Problem in adding User:",userDao.registerUser(user));
 	}

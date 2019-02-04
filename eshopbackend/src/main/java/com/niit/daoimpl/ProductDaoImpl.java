@@ -27,7 +27,7 @@ public class ProductDaoImpl implements ProductDao
 	{
 		try
         {
-        sessionFactory.getCurrentSession().save(product);
+        sessionFactory.getCurrentSession().saveOrUpdate(product);
         return true;
         }
         catch(Exception e)
@@ -70,6 +70,7 @@ public class ProductDaoImpl implements ProductDao
 	public Product getProduct(int proId) {
 		Session session=sessionFactory.openSession();
         Product product=session.get(Product.class,proId);        
-		return product ;
+		session.close();
+        return product;
 	}
 }
