@@ -14,7 +14,7 @@
 
 <body>
 
-<div class="container">
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -22,11 +22,11 @@
  </div>
   <c:if test="${!sessionScope.loggedIn}">
     <ul class="nav navbar-nav"> 
-      <li><a href="home">Home</a></li>
+      <li><a href="home">HOME</a></li>
       <li><a href="<c:url value="/login"/>">LOGIN</a></li>
       <li><a href="<c:url value="/register"/>">REGISTER</a></li>
-      <li><a href="<c:url value="/contactus"/>">ContactUs</a></li>
-      <li><a href="<c:url value="/aboutus"/>">AboutUs</a></li>
+      <li><a href="<c:url value="/contactus"/>">CONTACTUS</a></li>
+      <li><a href="<c:url value="/aboutus"/>">ABOUTUS</a></li>
      </ul>
      </c:if>
      
@@ -45,6 +45,7 @@
               <ul class="nav navbar-nav"> 
                   <li><a href="<c:url value="/userhome"/>">Home</a></li>                  
                   <li><a href="<c:url value="/productDisplay"/>">Product Gallery</a></li>
+                   <li><a href="<c:url value="/cart"/>">Cart</a></li>
               </ul>
       </c:if>  
  </c:if> 
@@ -57,6 +58,6 @@
 </div>
 </c:if>
 </nav>
-</div>
+
 </body>
 </html>

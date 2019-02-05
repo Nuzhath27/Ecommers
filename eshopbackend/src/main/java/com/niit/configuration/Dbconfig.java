@@ -3,6 +3,7 @@ package com.niit.configuration;
 import java.util.Properties;
 
 
+
 import javax.sql.DataSource;
 
 import org.hibernate.SessionFactory;
@@ -14,6 +15,7 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.niit.model.CartItem;
 import com.niit.model.Category;
 import com.niit.model.Product;
 import com.niit.model.Supplier;
@@ -51,6 +53,7 @@ public class Dbconfig {
         factory.addAnnotatedClass(Supplier.class);
         factory.addAnnotatedClass(UserInfo.class);
         factory.addAnnotatedClass(Product.class);
+        factory.addAnnotatedClass(CartItem.class);
 
 
         

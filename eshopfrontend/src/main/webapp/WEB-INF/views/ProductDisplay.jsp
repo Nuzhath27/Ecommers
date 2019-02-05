@@ -2,6 +2,8 @@
 <%@include file="Header.jsp"%>
 
 
+
+
 <div class = "row">
 
 <c:forEach items="${productList}" var="product">

@@ -13,24 +13,21 @@ public class CartItem {
 	@GeneratedValue
 	int cartItemId;
 	
-	int cartId;
+	
 	int proId;
 	int quantity;
-	int subTotal;
+	int proprice;
 	
+	String proName;
 	String username;
 	String paymentStatus;
+	
+	
 	public int getCartItemId() {
 		return cartItemId;
 	}
 	public void setCartItemId(int cartItemId) {
 		this.cartItemId = cartItemId;
-	}
-	public int getCartId() {
-		return cartId;
-	}
-	public void setCartId(int cartId) {
-		this.cartId = cartId;
 	}
 	public int getProId() {
 		return proId;
@@ -38,17 +35,24 @@ public class CartItem {
 	public void setProId(int proId) {
 		this.proId = proId;
 	}
+	
+	public int getProprice() {
+		return proprice;
+	}
+	public void setProprice(int proprice) {
+		this.proprice = proprice;
+	}
 	public int getQuantity() {
 		return quantity;
 	}
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	public int getSubTotal() {
-		return subTotal;
+	public String getProName() {
+		return proName;
 	}
-	public void setSubTotal(int subTotal) {
-		this.subTotal = subTotal;
+	public void setProName(String proName) {
+		this.proName = proName;
 	}
 	public String getUsername() {
 		return username;
