@@ -45,7 +45,8 @@ public class UserDaoImpl implements UserDao
 	public UserInfo getUser(String username) {
 		{
 		    Session session=sessionFactory.openSession();
-	        UserInfo user=session.get(UserInfo.class,username);        
+	        UserInfo user=session.get(UserInfo.class,username); 
+	        session.close();
 			return user;
 	}
 }

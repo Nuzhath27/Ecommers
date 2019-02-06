@@ -17,6 +17,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.niit.model.CartItem;
 import com.niit.model.Category;
+import com.niit.model.OrderDetail;
 import com.niit.model.Product;
 import com.niit.model.Supplier;
 import com.niit.model.UserInfo;
@@ -54,7 +55,7 @@ public class Dbconfig {
         factory.addAnnotatedClass(UserInfo.class);
         factory.addAnnotatedClass(Product.class);
         factory.addAnnotatedClass(CartItem.class);
-
+        factory.addAnnotatedClass(OrderDetail.class);
 
         
         System.out.println("---SessionFactory object created----");

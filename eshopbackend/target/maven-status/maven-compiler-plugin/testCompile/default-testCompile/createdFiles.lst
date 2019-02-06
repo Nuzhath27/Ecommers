@@ -1,6 +1,8 @@
-com\niit\eshopbackend\SupplierTest.class
-com\niit\eshopbackend\GeneralTest.class
-com\niit\eshopbackend\CategoryUnitTest.class
+com\niit\eshopbackend\CartUnitTest.class
+com\niit\eshopbackend\OrderDetailTest.class
 com\niit\eshopbackend\ProductTest.class
 com\niit\eshopbackend\UserInfoTest.class
 com\niit\eshopbackend\AppTest.class
+com\niit\eshopbackend\SupplierTest.class
+com\niit\eshopbackend\GeneralTest.class
+com\niit\eshopbackend\CategoryUnitTest.class
