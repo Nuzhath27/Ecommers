@@ -4,6 +4,7 @@ package com.niit.controller;
 
 
 import java.util.Collection;
+
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -16,16 +17,25 @@ import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.niit.dao.ProductDao;
+import com.niit.dao.UserDao;
+import com.niit.model.Category;
 import com.niit.model.Product;
+import com.niit.model.UserInfo;
 
 @Controller
 public class UserController 
 {
     @Autowired
     ProductDao productDao;
+    
+    @Autowired
+    UserDao userDao;
     
     @RequestMapping(value="/userhome")
 	public String showUserHome(Model m,HttpSession session)
@@ -36,6 +46,17 @@ public class UserController
 		m.addAttribute("productList", listProducts);
         return "UserHome";
 	}
+    
+    @RequestMapping(value="/addUser",method=RequestMethod.POST)
+    public String addUser(Model m,@ModelAttribute("user")UserInfo userInfo,HttpSession session)
+    {
+    	    	
+    	UserInfo user=new UserInfo();
+    	userDao.registerUser(user);
+				
+		return "Login";
+	}
+    
 	
 	
 	@RequestMapping(value="/login_success")
