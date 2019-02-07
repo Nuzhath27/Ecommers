@@ -63,6 +63,9 @@
       <div class="item">
         <img src="<c:url value="/resources/images/3.jpg" />" alt="Image">     
       </div>
+      <div class="item">
+        <img src="<c:url value="/resources/images/4.jpg" />" alt="Image">     
+      </div>
        </div>
 
     <!-- Left and right controls -->

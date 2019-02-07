@@ -2,6 +2,7 @@ package com.niit.controller;
 
 import java.util.List;
 
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -84,7 +85,7 @@ public class CartController
 	@RequestMapping("/deleteCartItem/{cartItemId}")
 	public String deleteCartItem(@PathVariable("cartItemId")int cartItemId,Model m,HttpSession session)
 	{
-		CartItem cartItem=cartDao.getCartItem(cartItemId);
+       CartItem cartItem=cartDao.getCartItem(cartItemId);
 		
 		
 		cartDao.deleteCartItem(cartItem);
