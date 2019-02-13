@@ -32,5 +32,11 @@ public class PageController
 		m.addAttribute("pageinfo","ContactUs");
 		return "ContactUs";
 	}
+	@RequestMapping("/home")
+	public String showHome(Model m)
+	{
+		m.addAttribute("pageinfo","Home");
+		return "Home";
+	}
 }
 

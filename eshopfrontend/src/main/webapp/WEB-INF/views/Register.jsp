@@ -3,68 +3,69 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width,initial-scale="1">
 
-<style type="text/css">
-@import url(http://fonts.googleapis.com/css?family=Roboto:400);
-body {
-  background-color:#fff;
-  -webkit-font-smoothing: antialiased;
-  font: normal 14px Roboto,arial,sans-serif;
-}
-
-.container {
-    padding: 25px;
-    position: fixed;
-}
-
-.form-login {
-    background-color: #EDEDED;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 15px;
-    border-color:#d2d2d2;
-    border-width: 5px;
-    box-shadow:0 1px 0 #cfcfcf;
-}
-
-h4 { 
- border:0 solid #fff; 
- border-bottom-width:1px;
- padding-bottom:10px;
- text-align: center;
-}
-</style>
-
-
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js">
-</script>
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
 <div class="container">
-<form:form action="addUser" modelAttribute="user" method="post">
-<div class="row">
-<div class="col-md-offset-5 col-md-3">
-<div class="form-login">
-<h4>Enter your Details to Register</h4>
-<input type="text" name="customerName" id="customerName"class="form-control input-sm chat-input" placeholder="Your name" />
-</br>
-<input type="text" name="username" id="username"  class="form-control input-sm chat-input" placeholder="username" />
-</br>
-<input type="text" name="customerAddr" id="customerAddr" class="form-control input-sm chat-input" placeholder="address" />
-</br>
-<input type="password" name="password" id="password" class="form-control input-sm chat-input" placeholder="password" />
-</br>
-<div class="wrapper">
-<span class="group-btn">     
- <center> <input type="submit" value="Register" class="btn btn-primary btn-md"/></center>
+ <div class="row main">
+  <div class="main-login main-center">
+   <h5>Register</h5>
+    <c:url var="add" value="/addUser"/>
+      <form:form method="post" action="${add}" modelAttribute="user">
+      
+      <div class="form-group">
+        <label for="name" class="cols-sm-2 control-label">Your Name</label>
+         <div class="cols-sm-10">
+          <div class="input-group">
+           <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+            <input type="text" name="customerName" id="customerName"class="form-control input-sm chat-input" placeholder="Your name" />
+          </div>
+         </div>
+        </div>
 
-</span>
+       
+        
+        <div class="form-group">
+        <label for="username" class="cols-sm-2 control-label">UserName</label>
+         <div class="cols-sm-10">
+          <div class="input-group">
+           <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+            <input type="text" name="username" id="username"class="form-control input-sm chat-input" placeholder="User Name" />
+          </div>
+         </div>
+        </div>
+        
+        <div class="form-group">
+        <label for="customerAddr" class="cols-sm-2 control-label">Address</label>
+         <div class="cols-sm-10">
+          <div class="input-group">
+           <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+            <input type="text" name="customerAddr" id="customerAddr"class="form-control input-sm chat-input" placeholder="Address" />
+          </div>
+         </div>
+        </div>
+        
+        <div class="form-group">
+        <label for="password" class="cols-sm-2 control-label">Password</label>
+         <div class="cols-sm-10">
+          <div class="input-group">
+           <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+            <input type="password" name="password" id="password"class="form-control input-sm chat-input" placeholder="Password" />
+          </div>
+         </div>
+        </div>
+        
+        <div class="form-group">
+           <input type="submit" value="Register"/>
+        </div>
+   </form:form>        
+
 </div>
 </div>
 </div>
-</div>
-</form:form>
-</div>
+</body>
+</html>

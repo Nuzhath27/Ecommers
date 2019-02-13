@@ -46,16 +46,15 @@ public class UserController
 		m.addAttribute("productList", listProducts);
         return "UserHome";
 	}
-    
     @RequestMapping(value="/addUser",method=RequestMethod.POST)
-    public String addUser(Model m,@ModelAttribute("user")UserInfo userInfo,HttpSession session)
+    public String addUser(Model m,@ModelAttribute("user")UserInfo userInfo)
     {
     	    	
-    	UserInfo user=new UserInfo();
-    	userDao.registerUser(user);
+    	userDao.registerUser(userInfo);
 				
 		return "Login";
 	}
+    
     
 	
 	

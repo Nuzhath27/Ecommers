@@ -32,12 +32,12 @@ public class UserInfoTest {
 	{
 		UserInfo user=new UserInfo();
 		
-		user.setUsername("Happy");
-		user.setPassword("P258");
-		user.setRole("ROLE_ADMIN");
+		user.setUsername("Rahul");
+		user.setPassword("P369");
+		user.setRole("ROLE_USER");
 		user.setEnabled(true);
-		user.setCustomerName("Sameer");
-		user.setCustomerAddr("Mumbai");
+		user.setCustomerName("Rahul Singh");
+		user.setCustomerAddr("Delhi");
 		
 		assertTrue("Problem in adding User:",userDao.registerUser(user));
 	}
