@@ -14,8 +14,8 @@
  <div class="row main">
   <div class="main-login main-center">
    <h5>Register</h5>
-    <c:url var="add" value="/addUser"/>
-      <form:form method="post" action="${add}" modelAttribute="user">
+
+      <form:form method="post" action="addUser" modelAttribute="userInfo">
       
       <div class="form-group">
         <label for="name" class="cols-sm-2 control-label">Your Name</label>
@@ -34,7 +34,7 @@
          <div class="cols-sm-10">
           <div class="input-group">
            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-            <input type="text" name="username" id="username"class="form-control input-sm chat-input" placeholder="User Name" />
+            <input type="text" name="userName" id="userName"class="form-control input-sm chat-input" placeholder="User Name" />
           </div>
          </div>
         </div>

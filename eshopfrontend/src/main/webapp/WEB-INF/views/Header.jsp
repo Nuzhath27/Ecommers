@@ -22,7 +22,7 @@
  </div>
   <c:if test="${!sessionScope.loggedIn}">
     <ul class="nav navbar-nav"> 
-      <li><a href="<c:url value="/Home"/>">HOME</a></li>
+      <li><a href="<c:url value="/home"/>">HOME</a></li>
       <li><a href="<c:url value="/login"/>">LOGIN</a></li>
       <li><a href="<c:url value="/register"/>">REGISTER</a></li>
       <li><a href="<c:url value="/contactus"/>">CONTACTUS</a></li>

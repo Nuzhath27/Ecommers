@@ -45,7 +45,7 @@ h4 {
 <div class="row">
 <div class="col-md-offset-5 col-md-3">
 <div class="form-login">
-<h4>Welcome back.</h4>
+<h4>LOG IN</h4>
 <input type="text" name="username" required class="form-control input-sm chat-input" placeholder="username" />
 </br>
 <input type="password" name="password" required class="form-control input-sm chat-input" placeholder="password" />

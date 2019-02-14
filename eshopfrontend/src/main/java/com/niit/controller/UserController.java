@@ -46,13 +46,25 @@ public class UserController
 		m.addAttribute("productList", listProducts);
         return "UserHome";
 	}
+    
+    
+    
     @RequestMapping(value="/addUser",method=RequestMethod.POST)
-    public String addUser(Model m,@ModelAttribute("user")UserInfo userInfo)
+    public String addUser(Model m, @RequestParam("userName")String username,@RequestParam("customerName")String customerName,@RequestParam("customerAddr")String customerAddr, @RequestParam("password")String password)
     {
     	    	
-    	userDao.registerUser(userInfo);
+    	UserInfo user=new UserInfo();
+    	user.setCustomerAddr(customerAddr);
+    	user.setCustomerName(customerName);
+    	user.setEnabled(true);
+    	user.setRole("ROLE_USER");
+    	user.setPassword(password);
+    	user.setUsername(username);
+    	
+    	userDao.registerUser(user);
 				
 		return "Login";
+    	//return "Home";
 	}
     
     

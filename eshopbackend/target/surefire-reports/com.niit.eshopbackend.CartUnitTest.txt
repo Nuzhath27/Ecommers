@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.niit.eshopbackend.CartUnitTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0.062 sec
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0.046 sec

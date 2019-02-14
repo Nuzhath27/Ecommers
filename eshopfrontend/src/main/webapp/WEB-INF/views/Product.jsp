@@ -63,7 +63,7 @@
         
         <table align="center" class="table table-bordered">
         <tr class="danger">
-           <td>Product ID</td>
+           <td>Product</td>
            <td>Product Name</td>
            <td>Price</td>
            <td>Stock</td>
@@ -73,7 +73,7 @@
          </tr>
          <c:forEach items="${productList}" var="product">
          <tr class="info">
-            <td>${product.proId}</td>
+            <td><img width=50 height=50 src = "<c:url value="/resources/images/${product.proId}.jpg"/>"></td>
             <td>${product.proName}</td>
             <td>${product.proprice}</td>
             <td>${product.stock}</td>
