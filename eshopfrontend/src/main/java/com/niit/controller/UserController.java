@@ -64,7 +64,7 @@ public class UserController
     	userDao.registerUser(user);
 				
 		return "Login";
-    	//return "Home";
+    	
 	}
     
     

@@ -29,7 +29,7 @@
      <td>Product Id</td>
      <td>Product Name</td>
      <td>Quantity</td>
-     <td>Price
+     <td>Price</td>
      <td>SubTotal</td>
     </tr>
 <c:forEach items="${cartItemList}" var="cartItem">
@@ -38,13 +38,13 @@
   <td>${cartItem.proId}</td>
   <td>${cartItem.proName}</td>
   <td>${cartItem.quantity}</td>
-  <td>${cartItem.proprice}</td>
-  <td>${cartItem.proprice}*${cartItem.quantity}</td>
+  <td>&#x20B9;${cartItem.proprice}</td>
+  <td>&#x20B9;${cartItem.proprice}*${cartItem.quantity}</td>
   </tr>
  </c:forEach>
 <tr class="warning">
 <td colspan="4">Final Amount</td>
-<td colspan="1">${totalAmount}</td>
+<td colspan="1">&#x20B9;${totalAmount}</td>
 </tr>
 <tr class="warning">
 <td colspan="4"><h4>Shipping Address</h4></td>

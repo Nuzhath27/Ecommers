@@ -14,7 +14,7 @@
          <img src = "<c:url value="/resources/images/${product.proId}.jpg"/>" alt = "Generic placeholder thumbnail">
     </a>
     <p> ${product.proName}</p>
-    <p> Price: Rs ${product.proprice}/-</p>
+    <p> Price: &#x20B9; ${product.proprice}/-</p>
     <p> Stock: ${product.stock} /-</p>
 
     </div>  

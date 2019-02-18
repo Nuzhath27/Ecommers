@@ -29,8 +29,8 @@
   <td>${cartItem.proId}</td>
   <td>${cartItem.proName}</td>
   <td><input type="text" value="${cartItem.quantity}" name="quantity"></td>
-  <td>${cartItem.proprice}</td>
-  <td>${cartItem.proprice}*${cartItem.quantity}</td>
+  <td>&#x20B9;${cartItem.proprice}</td>
+  <td>&#x20B9;${cartItem.proprice}*${cartItem.quantity}</td>
   <td>
      <input type="submit" value="UPDATE" type="button" class="btn btn-success"/>
      <a href="<c:url value="/deleteCartItem/${cartItem.cartItemId}"/>" class="btn btn-danger">DELETE</a>
@@ -40,7 +40,7 @@
 </c:forEach>
 <tr class="warning">
 <td colspan="4">Final Amount</td>
-<td colspan="2">${totalAmount}</td>
+<td colspan="2">&#x20B9;${totalAmount}</td>
 </tr>
 <tr class="active">
 <td colspan="3">

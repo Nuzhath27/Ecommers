@@ -19,7 +19,7 @@
   </tr>
   <tr>
   <td>Price</td>
-    <td>${product.proprice}</td>
+    <td>&#x20B9; ${product.proprice}</td>
   </tr>
   <tr>
   <td>Stock</td>
